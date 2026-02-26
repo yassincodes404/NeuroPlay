@@ -1,9 +1,9 @@
-CREATE TABLE quiz_question (
+CREATE TABLE IF NOT EXISTS  quiz_question (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     question_text VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE quiz_answer (
+CREATE TABLE IF NOT EXISTS quiz_answer (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     quiz_question_id BIGINT NOT NULL,
     answer_text VARCHAR(255) NOT NULL,
