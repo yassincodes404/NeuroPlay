@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <style>
+        body { font-family: Arial; background: #f9f9f9; padding: 20px; }
+        .question { margin-bottom: 25px; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .answers { margin-top: 10px; }
+        .answers label { display: block; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Quiz Time!</h1>
+    <form>
+        <div th:each="q : ${questions}" class="question">
+            <p th:text="${q.questionText}">Question text</p>
+            <div class="answers" th:each="a : ${q.answers}">
+                <label>
+                    <input type="radio" th:name="'question_' + ${q.id}" th:value="${a.id}"/>
+                    <span th:text="${a.answerText}">Answer</span>
+                </label>
+            </div>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

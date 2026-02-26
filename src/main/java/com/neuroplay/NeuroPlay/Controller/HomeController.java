@@ -12,12 +12,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 
 
-        @GetMapping("/home")
-    public String homePage(Model model) {
-        model.addAttribute("name", "NeuroPlay User, welcome to the home page!");
-        return "index";
-    
-    }
+@GetMapping("/")
+public String homePage() {
+    return "index.html"; // serves the static file
+}
+
         @GetMapping("/template")
     public String templatePage(Model model) {
         model.addAttribute("username", "NeuroPlay User");
