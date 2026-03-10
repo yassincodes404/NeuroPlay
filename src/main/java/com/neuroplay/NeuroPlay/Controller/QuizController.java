@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.neuroplay.NeuroPlay.Entities.QuizAnswer;
+import com.neuroplay.NeuroPlay.Entities.Quizes.QuizAnswer;
 import com.neuroplay.NeuroPlay.Repository.QuizAnswerRepository;
 import com.neuroplay.NeuroPlay.Repository.QuizQuestionRepository;
 
